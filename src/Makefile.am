@@ -418,6 +418,14 @@ hddtemp_la_LIBADD += -lsocket
 endif
 endif
 
+if BUILD_PLUGIN_INTEL_CPU_ENERGY
+pkglib_LTLIBRARIES += intel_cpu_energy.la
+intel_cpu_energy_la_SOURCES = intel_cpu_energy.c
+intel_cpu_energy_la_CFLAGS = $(AM_CFLAGS)
+intel_cpu_energy_la_LDFLAGS = $(PLUGIN_LDFLAGS)
+intel_cpu_energy_la_LIBADD =
+endif
+
 if BUILD_PLUGIN_INTERFACE
 pkglib_LTLIBRARIES += interface.la
 interface_la_SOURCES = interface.c
