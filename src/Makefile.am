@@ -1,4 +1,5 @@
 SUBDIRS = libcollectdclient
+SUBDIRS += intel_cpu_energy
 if BUILD_WITH_OWN_LIBOCONFIG
 SUBDIRS += liboconfig
 endif
@@ -421,9 +422,9 @@ endif
 if BUILD_PLUGIN_INTEL_CPU_ENERGY
 pkglib_LTLIBRARIES += intel_cpu_energy.la
 intel_cpu_energy_la_SOURCES = intel_cpu_energy.c
-intel_cpu_energy_la_CFLAGS = $(AM_CFLAGS)
+intel_cpu_energy_la_CFLAGS = $(AM_CFLAGS) -I$(top_srcdir)/src/intel_cpu_energy
 intel_cpu_energy_la_LDFLAGS = $(PLUGIN_LDFLAGS)
-intel_cpu_energy_la_LIBADD =
+intel_cpu_energy_la_LIBADD = intel_cpu_energy/lib_intel_cpu_energy.la
 endif
 
 if BUILD_PLUGIN_INTERFACE
