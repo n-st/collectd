@@ -5668,6 +5668,7 @@ AC_PLUGIN([filecount],   [yes],                [Count files in directories])
 AC_PLUGIN([fscache],     [$plugin_fscache],    [fscache statistics])
 AC_PLUGIN([gmond],       [$with_libganglia],   [Ganglia plugin])
 AC_PLUGIN([hddtemp],     [yes],                [Query hddtempd])
+AC_PLUGIN([intel_cpu_energy],   [yes],  [Energy consumption of (some) Intel CPUs])
 AC_PLUGIN([interface],   [$plugin_interface],  [Interface traffic statistics])
 AC_PLUGIN([ipc],         [$plugin_ipc],        [IPC statistics])
 AC_PLUGIN([ipmi],        [$plugin_ipmi],       [IPMI sensor statistics])
@@ -6067,6 +6068,7 @@ Configuration:
     fscache . . . . . . . $enable_fscache
     gmond . . . . . . . . $enable_gmond
     hddtemp . . . . . . . $enable_hddtemp
+    intel_cpu_energy  . . $enable_intel_cpu_energy
     interface . . . . . . $enable_interface
     ipc . . . . . . . . . $enable_ipc
     ipmi  . . . . . . . . $enable_ipmi
